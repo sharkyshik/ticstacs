@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+        <style>
+            body{
+                background-color:black;
+                color:white;
+                }
+        
+            button{
+                background-color:black;
+                outline:none;
+                }
+
+            table, th, td {
+                border: 1px solid white;
+                border-collapse: collapse;
+                background-color:black;
+                color:white;
+                font-size: 5rem;
+                }
+        
+            .highlight{
+                color:red;
+                }
+
+            td{
+                width:100px;
+                height:100px;
+                text-align:center;
+                }
+        
+            h1,h2,h3,table,button{
+            animation: blinker 1s linear 2;
+                }
+        @keyframes blinker{ 
+                50% {
+                     opacity: 0;
+                    } 
+                } 
+       
+        #newround{
+                margin:0 auto;
+                display:none;
+                }
+        </style>
+    </head>
+    
+    <body>
+        <div class="row" style="text-align:center;">
+        <h1 class="col-sm-12" >LETS PLAY TIC TAC TOE</h1>
+        </div>
+        
+        <div style="margin-top:100px;" class="row">
+        <h2 id="play1" class="col-sm-3" style="text-align:center;">Player 1(X): <span id="player1score"></span></h2>
+        
+        
+        <div class="col-sm-6" style="text-align:center;">
+            <h3 style="text-align:center">Round <span id="roundnum"></span></h3>
+            <h3 style="text-align:center"id="winner">Battle has begun</h3>
+            
+            <table align="center" id="board">
+            </table>
+           
+            <button onclick=resetscores()>Reset scores</button>
+            <button id="newround" onclick=play()>Proceed to next round</button>
+             
+        </div>
+      
+       <h2 id="play2" class="col-sm-3" style="text-align:center;">Player 2(O): <span id="player2score"></span> </h2>
+              </div>
+        
+        <script src="tictactoe.js"></script>
+    </body>
+</html>
